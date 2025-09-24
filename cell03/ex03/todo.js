@@ -1,5 +1,5 @@
 
-const COOKIE_NAME = "todos";     // เก็บลิสต์ในคุกกี้ชื่อนี้
+const COOKIE_NAME = "todos";    
 const listEl = document.getElementById("ft_list");
 const newBtn = document.getElementById("new_btn");
 
@@ -43,18 +43,17 @@ function saveTodos() {
   setCookie(COOKIE_NAME, JSON.stringify(todos), 365);
 }
 
-// ======== Rendering ========
 function render() {
-  listEl.innerHTML = ""; // เคลียร์ก่อนทุกครั้ง
-  // todos ใหม่สุดอยู่หัวลิสต์อยู่แล้ว เราแค่วนตามลำดับ
+  listEl.innerHTML = ""; 
+
   for (const text of todos) {
     const item = document.createElement("div");
     item.className = "todo-item";
-    item.textContent = text;          // ใช้ textContent กัน XSS
+    item.textContent = text;        
     item.addEventListener("click", () => {
       const ok = confirm(`Remove this TO DO?\n\n"${text}"`);
       if (ok) {
-        // ลบตัวนี้ออกจาก state
+        
         const idx = todos.indexOf(text);
         
         if (idx > -1) {
@@ -71,8 +70,7 @@ function render() {
 
 function addNewTodo() {
   const value = prompt("Enter a new TO DO:");
-  if (value && value.trim() !== "") {
-    // ใหม่ต้องอยู่บนสุด → unshift
+  if (value && value.trim() !== "") 
     todos.unshift(value.trim());
     saveTodos();
     render();
