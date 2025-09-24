@@ -1,6 +1,6 @@
  body {
   margin: 20px;
-  transition: background-color 0.5s; /* ทำให้สีเปลี่ยนแบบนุ่มนวล */
+  transition: background-color 0.5s; 
 }
 
 button {
