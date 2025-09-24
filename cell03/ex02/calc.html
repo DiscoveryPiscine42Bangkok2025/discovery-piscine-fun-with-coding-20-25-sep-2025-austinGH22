@@ -8,7 +8,7 @@
 <body>
   <h1>Basic Calculator</h1>
 
-  <!-- ฟอร์มเครื่องคิดเลข -->
+
   <form id="calcForm">
     <input type="text" id="left" placeholder="Left number">
     <select id="op">
@@ -26,7 +26,7 @@
     const form = document.getElementById('calcForm');
 
     form.addEventListener('submit', function (e) {
-      e.preventDefault(); // กัน reload หน้า
+      e.preventDefault(); 
 
       const left = document.getElementById('left').value;
       const right = document.getElementById('right').value;
@@ -35,7 +35,7 @@
       const a = parseInt(left, 10);
       const b = parseInt(right, 10);
 
-      // ตรวจสอบว่ากรอกเป็น integer >= 0 หรือไม่
+
       if (isNaN(a) || isNaN(b) || a < 0 || b < 0) {
         alert("Error :(");
         return;
@@ -43,14 +43,14 @@
 
       let result;
 
-      // ตรวจสอบหารด้วยศูนย์
+  
       if ((op === '/' || op === '%') && b === 0) {
         console.log("It's over 9000!");
         alert("It's over 9000!");
         return;
       }
 
-      // คำนวณ
+
       switch (op) {
         case '+': result = a + b; break;
         case '-': result = a - b; break;
@@ -63,7 +63,7 @@
       alert(result);
     });
 
-    // เตือนทุก 30 วินาที
+
     setInterval(() => {
       alert("Please, use me...");
     }, 30000);
