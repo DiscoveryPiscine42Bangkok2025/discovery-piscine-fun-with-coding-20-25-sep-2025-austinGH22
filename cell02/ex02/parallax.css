@@ -6,8 +6,8 @@ body, html {
 }
 
 .parallax {
-  min-height: 100vh; /* เต็มจอ */
-  background-attachment: fixed; /* ทำ parallax */
+  min-height: 100vh;
+  background-attachment: fixed; 
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -15,11 +15,11 @@ body, html {
 }
 
 .img1 {
-  background-image: url('https://picsum.photos/id/1015/1200/800'); /* ภาพแรก */
+  background-image: url('https://picsum.photos/id/1015/1200/800');
 }
 
 .img2 {
-  background-image: url('https://picsum.photos/id/1016/1200/800'); /* ภาพสอง */
+  background-image: url('https://picsum.photos/id/1016/1200/800');
 }
 
 .text {
